@@ -31,6 +31,29 @@ Encore
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app
     .enableSingleRuntimeChunk()
+    .copyFiles([{
+        from: './assets/images',
+
+        // optional target path, relative to the output dir
+        to: 'images/[path][name].[ext]',
+
+        // if versioning is enabled, add the file hash too
+        //to: 'images/[path][name].[hash:8].[ext]',
+
+        // only copy files matching this pattern
+        pattern: /\.(png|jpg|jpeg|svg|ico)$/
+    }, {
+        from: './assets/fonts',
+
+        // optional target path, relative to the output dir
+        to: 'fonts/[path][name].[ext]',
+
+        // if versioning is enabled, add the file hash too
+        //to: 'images/[path][name].[hash:8].[ext]',
+
+        // only copy files matching this pattern
+        pattern: /\.(svg|ttf|woff|woff2)$/
+    }])
 
     /*
      * FEATURE CONFIG
@@ -44,6 +67,7 @@ Encore
     .enableSourceMaps(!Encore.isProduction())
     // enables hashed filenames (e.g. app.abc123.css)
     .enableVersioning(Encore.isProduction())
+    //.enablePostCssLoader()
 
     .configureBabel((config) => {
         config.plugins.push('@babel/plugin-proposal-class-properties');
@@ -56,8 +80,8 @@ Encore
     })
 
     // enables Sass/SCSS support
-    //.enableSassLoader()
-
+    .enableSassLoader()
+    .enablePostCssLoader()
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
 

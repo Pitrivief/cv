@@ -1,0 +1,209 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Curriculum Vitae | Thomas Ripoll{% endblock %}
+{% block stylesheets %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="{{ asset('build/app.css') }}" rel="stylesheet"/>
+{% endblock %}
+{% block body %}
+<nav class="menu">
+    <input id="menu-expand" type="checkbox">
+    <label for="menu-expand" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link" href="#acceuil">Acceuil</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#experiences">Expériences</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#diplomes">Diplômes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#bio">Bio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+        </li>
+    </ul>
+</nav>
+<header id="acceuil">
+    <div class="container">
+        <div class="row flex-column-reverse flex-lg-row justify-content-center header">
+            <div class="col-12 col-lg-6 title">
+                <h1>Thomas Ripoll</h1>
+                <h2>Développeur / Devops</h2>
+                <p>7 ans d'expériences</p>
+                <div class="social">
+                    <img src="{{ asset('build/images/github-logo.svg') }}" alt="">
+                    <img src="{{ asset('build/images/linkedin-logo.svg') }}" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 photo">
+                <img src="{{ asset('build/images/photo.jpg') }}" alt="">
+            </div>
+        </div>
+    </div>
+</header>
+<main class="container section experiences" id="experiences">
+    <div class="row experience">
+        <div class="col-lg-8 offset-lg-2">
+            <h2>Expériences</h2>
+        </div>
+    </div>
+    <div class="experiences-wrapper container">
+        <div class="row experience">
+            <div class="col left">
+                <div class="" style="--logo: url({{ asset('build/images/legallais-logo.png') }});">
+                    <p class='date'>Année 2018-En cours</p>
+                    <h3>
+                        Legallais
+                    </h3>
+                    <p>Développeur/Devops</p>
+                </div>
+            </div>
+            <div class="col right">
+                <div>
+                    <h4>Tâches:</h4>
+                    <ul>
+                        <li>Maintenance Site Ecommerce</li>
+                        <li>Portage des briques de l'ancien monolithe en microservices</li>
+                        <li>Maintenance du nuage de microservices</li>
+                        <li>Développement de nouvelles features</li>
+                    </ul>
+                    <h5>Technologies:</h5>
+                    <ul>
+                        <li>PHP (Symfony, ZF), JAVA (Springboot)</li>
+                        <li>MYSQL</li>
+                        <li>Kubernetes, Docker</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row experience">
+            <div class="col  left">
+                <div style="--logo: url({{ asset('build/images/logo-sammagenceweb.png') }});">
+                    <p class='date'>Année 2012-2013</p>
+                    <h3>
+                        Samm Agence Web
+                    </h3>
+                    <p>Développeur full stack</p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="col  right">
+                <div>
+                    <ul>
+                        <li>Front </li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row experience">
+            <div class="col  left">
+                <div style="--logo: url({{ asset('build/images/logo-gpt.png') }});">
+                    <p class='date'>Année 2012-2013</p>
+                    <h3>
+                        Go pro travelling
+                    </h3>
+
+                    <p>Cofondateur / développeur</p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="col  right">
+                <div>
+                    <ul>
+                        <li>Front </li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<div class="diplomes section" id="diplomes">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <h2>Formations et Compétences</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h3>Formation</h3>
+                <p>Diplôme Chef de projet multimédia spécialité Développement.</p>
+                <h3>Langues</h3>
+                <p>Anglais courant et technique.</p>
+                <h3>Compétences</h3>
+                <ul>
+                    <li>Technologies Front : Javascript, SCSS, Webpack</li>
+                    <li>Technologies Back : PHP(Symfony, ZF), JAVA (Maven, Springboot)</li>
+                    <li>Devops : Docker, Kubernetes, Keycloak, RabbitMQ</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="bio" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <h2>Qui suis je?</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-6">
+
+                <p>
+                    Passionné par les nouvelles Technologies depuis de nombreuses années, Ce métier présente les caractéristiques idéale pour alimenter mon insatiable soif de curiosité.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact section" id="contact">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col d-flex flex-column text-center align-items-stretch">
+                <h2>Contacts</h2>
+                <div>
+                        <span class="input input--ruri">
+                            <input class="input__field input__field--ruri" type="text" id="input-26" />
+                            <label class="input__label input__label--ruri" for="input-26">
+                                <span class="input__label-content input__label-content--ruri">Username</span>
+                            </label>
+                        </span>
+                </div>
+                <div>
+                        <span class="input input--ruri">
+                            <input class="input__field input__field--ruri" type="text" id="input-27" />
+                            <label class="input__label input__label--ruri" for="input-27">
+                                <span class="input__label-content input__label-content--ruri">Website</span>
+                            </label>
+                        </span>
+                </div>
+                <div>
+                        <span class="input input--ruri">
+                            <input class="input__field input__field--ruri" type="text" id="input-28" />
+                            <label class="input__label input__label--ruri" for="input-28">
+                                <span class="input__label-content input__label-content--ruri">Invitation Code</span>
+                            </label>
+                        </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block javascript_bottom %}
+    <script src="{{ asset('build/app.js') }}"></script>
+{% endblock %}
