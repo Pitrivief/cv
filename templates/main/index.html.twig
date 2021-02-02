@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Curriculum Vitae | Thomas Ripoll{% endblock %}
+{% block title %}Thomas Ripoll | Curriculum Vitae{% endblock %}
 {% block stylesheets %}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
             <a class="nav-link" href="#experiences">Expériences</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#diplomes">Diplômes</a>
+            <a class="nav-link" href="#diplomes">Diplômes et Compétences</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#bio">Bio</a>
@@ -38,7 +38,7 @@
             <div class="col-12 col-lg-6 title">
                 <h1>Thomas Ripoll</h1>
                 <h2>Développeur / Devops</h2>
-                <p>7 ans d'expériences</p>
+                <p>4 sept 1984</p>
                 <div class="social">
                     <img src="{{ asset('build/images/github-logo.svg') }}" alt="">
                     <img src="{{ asset('build/images/linkedin-logo.svg') }}" alt="">
@@ -50,7 +50,7 @@
         </div>
     </div>
 </header>
-<main class="container section experiences" id="experiences">
+<main class="container experiences" id="experiences">
     <div class="row experience">
         <div class="col-lg-8 offset-lg-2">
             <h2>Expériences</h2>
@@ -65,6 +65,9 @@
                         Legallais
                     </h3>
                     <p>Développeur/Devops</p>
+                    <p>
+                        Site e-commerce leader français dans la vente de Quincaillerie.
+                    </p>
                 </div>
             </div>
             <div class="col right">
@@ -78,6 +81,7 @@
                     </ul>
                     <h5>Technologies:</h5>
                     <ul>
+                        <li>JS, SCSS</li>
                         <li>PHP (Symfony, ZF), JAVA (Springboot)</li>
                         <li>MYSQL</li>
                         <li>Kubernetes, Docker</li>
@@ -88,20 +92,28 @@
         <div class="row experience">
             <div class="col  left">
                 <div style="--logo: url({{ asset('build/images/logo-sammagenceweb.png') }});">
-                    <p class='date'>Année 2012-2013</p>
+                    <p class='date'>Année 2016-2017</p>
                     <h3>
                         Samm Agence Web
                     </h3>
                     <p>Développeur full stack</p>
-                    <p></p>
+                    <p>Agence web, spécialisée dans les sites hôteliers. <br>Fournisseur officiel de Logis de France.</p>
                 </div>
             </div>
             <div class="col  right">
                 <div>
+                    <h4>Tâches:</h4>
                     <ul>
-                        <li>Front </li>
-                        <li></li>
-                        <li></li>
+                        <li>Intégration sitewebs</li>
+                        <li>Maintenance</li>
+                        <li>Dévelopement de librairies js</li>
+                        <li>Amélioration framework PHP maison</li>
+                    </ul>
+                    <h5>Technologies:</h5>
+                    <ul>
+                        <li>PHP, JS</li>
+                        <li>MYSQL</li>
+                        <li>Administration système</li>
                     </ul>
                 </div>
             </div>
@@ -109,21 +121,27 @@
         <div class="row experience">
             <div class="col  left">
                 <div style="--logo: url({{ asset('build/images/logo-gpt.png') }});">
-                    <p class='date'>Année 2012-2013</p>
+                    <p class='date'>Année 2012-2014</p>
                     <h3>
                         Go pro travelling
                     </h3>
 
                     <p>Cofondateur / développeur</p>
-                    <p></p>
+                    <p>Réseau social dans le monde du voyage</p>
                 </div>
             </div>
-            <div class="col  right">
+            <div class="col right">
                 <div>
+                    <h4>Tâches:</h4>
                     <ul>
-                        <li>Front </li>
-                        <li></li>
-                        <li></li>
+                        <li>Développement de la plateforme</li>
+                        <li>Maintenance</li>
+                        <li>Développement de l'application</li>
+                    </ul>
+                    <h5>Technologies:</h5>
+                    <ul>
+                        <li>PHP(Symfony 1), JS</li>
+                        <li>MYSQL</li>
                     </ul>
                 </div>
             </div>
@@ -140,13 +158,13 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <h3>Formation</h3>
-                <p>Diplôme Chef de projet multimédia spécialité Développement.</p>
+                <p>2018 - Diplôme Chef de projet multimédia spécialité développement.</p>
                 <h3>Langues</h3>
                 <p>Anglais courant et technique.</p>
                 <h3>Compétences</h3>
                 <ul>
                     <li>Technologies Front : Javascript, SCSS, Webpack</li>
-                    <li>Technologies Back : PHP(Symfony, ZF), JAVA (Maven, Springboot)</li>
+                    <li>Technologies Back : PHP (Symfony, ZF), JAVA (Springboot)</li>
                     <li>Devops : Docker, Kubernetes, Keycloak, RabbitMQ</li>
                 </ul>
             </div>
@@ -162,9 +180,13 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-6">
-
                 <p>
-                    Passionné par les nouvelles Technologies depuis de nombreuses années, Ce métier présente les caractéristiques idéale pour alimenter mon insatiable soif de curiosité.
+                    Passionné de nouvelles technologies depuis de nombreuses années, je m'épanouïs chaque jour dans mon metier.
+                    Autodidacte, j'ai découvert le monde de l'informatique après un début dans le graphisme.
+                    Ma curiosité m'amena peu à peu à composer mes premières pages webs et 10 ans plus tard,
+                    je n'ai toujours pas assouvi ma soif de connaissance.
+                    Souhaitant officialiser mes compétences, j'ai obtenu mon diplôme de chef de projet multimédia avec Openclassrooms en 2018.
+                    Grâce à ce sésame, j'ai pu intégrer une grande société qui me donne des sujets pour mettre en application les technologies de pointes du monde du web.
                 </p>
             </div>
         </div>

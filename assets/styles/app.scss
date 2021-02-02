@@ -12,20 +12,6 @@ h1 {
 }
 
 
-
-
-
-
-
-
-.menu input
-{
-    display: none;
-
-}
-
-
-//////////////////
 .menu {
     position: fixed;
     right: 0px;
@@ -209,6 +195,9 @@ header {
 }
 .header {
     height: 100vh;
+    h2{
+        font-weight:300;
+    }
     >div {
         display: flex;
         align-items: center;
@@ -240,7 +229,6 @@ header {
 }
 .experiences {
     position: relative;
-    padding-top: 6em;
     @include media-breakpoint-up(lg) {
         &:after {
             height: calc( 100% + 6em );
@@ -253,57 +241,70 @@ header {
             transform: translate(-50%);
         }
     }
-}
-.experiences-wrapper {
-    max-width: 900px;
-}
-.experience {
-    position: relative;
-    padding-bottom: 6em;
-    padding-top: 6em;
-    .left {
-        >div {
-            padding-left: 7em;
-            background-image: var(--logo);
-            background-repeat: no-repeat;
-            background-position: left top;
-            background-size: 5em;
-            height: 100%;
-        }
-        .date {
-            position: absolute;
-            right: 50%;
-            top: -0em;
-            padding-right: 10px;
-            font-size: 0.8em;
-            font-weight: bold;
-            &:after {
-                content: "";
-                position: absolute;
-                height: 1px;
-                width: 10px;
-                background-color: rgb(129, 129, 129);
-                right: -5px;
-                top: 50%;
-                transform: translateY(-50%);
+    .experiences-wrapper {
+        max-width: 900px;
+        padding-top: 3em;
+        .experience {
+            position: relative;
+            padding-bottom: 6em;
+            padding-top: 6em;
+
+            .left {
+                >div {
+                    padding-left: 7em;
+                    background-image: var(--logo);
+                    background-repeat: no-repeat;
+                    background-position: left top;
+                    background-size: 5em;
+                    height: 100%;
+                }
+                .date {
+                    position: absolute;
+                    right: 50%;
+                    top: -0em;
+                    padding-right: 10px;
+                    font-size: 0.8em;
+                    font-weight: bold;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        height: 1px;
+                        width: 10px;
+                        background-color: rgb(129, 129, 129);
+                        right: -5px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+                h3 {
+                    text-decoration: underline;
+                }
+            }
+            .right {
+                >div {
+                    padding-top: 40px;
+                    padding-left: 6em;
+                }
             }
         }
-        h3 {
-            text-decoration: underline;
-        }
-    }
-    .right {
-        >div {
-            padding-top: 40px;
-            padding-left: 6em;
-        }
     }
 }
+
+
 .section {
     padding-top: 5em;
+    h2{
+        padding-bottom: 2rem;
+    }
     p {
         font-family: 'Lato', sans-serif;
         font-weight: 300;
+    }
+}
+#bio{
+    margin-bottom: 5em;
+    p{
+        text-align: justify;
     }
 }
 .contact {
