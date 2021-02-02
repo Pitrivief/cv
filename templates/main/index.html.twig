@@ -22,14 +22,16 @@
             <a class="nav-link" href="#experiences">Expériences</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#diplomes">Diplômes et Compétences</a>
+            <a class="nav-link" href="#diplomes">Compétences</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#bio">Bio</a>
         </li>
+        {#
         <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
         </li>
+        #}
     </ul>
 </nav>
 <header id="acceuil">
@@ -38,10 +40,14 @@
             <div class="col-12 col-lg-6 title">
                 <h1>Thomas Ripoll</h1>
                 <h2>Développeur / Devops</h2>
-                <p>4 sept 1984</p>
+                <p><a href="mailto:ripolltho@gmail.com">ripolltho@gmail.com</a></p>
                 <div class="social">
-                    <img src="{{ asset('build/images/github-logo.svg') }}" alt="">
-                    <img src="{{ asset('build/images/linkedin-logo.svg') }}" alt="">
+                    <a href="https://github.com/Pitrivief">
+                        <img src="{{ asset('build/images/github-logo.svg') }}" alt="">
+                    </a>
+                    <a href="https://www.linkedin.com/in/thomas-ripoll-407343116/">
+                        <img src="{{ asset('build/images/linkedin-logo.svg') }}" alt="">
+                    </a>
                 </div>
             </div>
             <div class="col-12 col-lg-6 photo">
@@ -192,39 +198,52 @@
         </div>
     </div>
 </section>
+    {#
 <section class="contact section" id="contact">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col d-flex flex-column text-center align-items-stretch">
                 <h2>Contacts</h2>
                 <div>
-                        <span class="input input--ruri">
-                            <input class="input__field input__field--ruri" type="text" id="input-26" />
-                            <label class="input__label input__label--ruri" for="input-26">
-                                <span class="input__label-content input__label-content--ruri">Username</span>
-                            </label>
-                        </span>
+                    <span class="input input--ruri">
+                        <input class="input__field input__field--ruri" type="text" id="input-26" />
+                        <label class="input__label input__label--ruri" for="input-26">
+                            <span class="input__label-content input__label-content--ruri">Username</span>
+                        </label>
+                    </span>
                 </div>
                 <div>
-                        <span class="input input--ruri">
-                            <input class="input__field input__field--ruri" type="text" id="input-27" />
-                            <label class="input__label input__label--ruri" for="input-27">
-                                <span class="input__label-content input__label-content--ruri">Website</span>
-                            </label>
-                        </span>
+                    <span class="input input--ruri">
+                        <input class="input__field input__field--ruri" type="text" id="input-27" />
+                        <label class="input__label input__label--ruri" for="input-27">
+                            <span class="input__label-content input__label-content--ruri">Website</span>
+                        </label>
+                    </span>
                 </div>
                 <div>
-                        <span class="input input--ruri">
-                            <input class="input__field input__field--ruri" type="text" id="input-28" />
-                            <label class="input__label input__label--ruri" for="input-28">
-                                <span class="input__label-content input__label-content--ruri">Invitation Code</span>
-                            </label>
-                        </span>
+                    <span class="input input--ruri">
+                        <input class="input__field input__field--ruri" type="text" id="input-28" />
+                        <label class="input__label input__label--ruri" for="input-28">
+                            <span class="input__label-content input__label-content--ruri">Invitation Code</span>
+                        </label>
+                    </span>
+                </div>
+
+                <div>
+                    <textarea name="" id="" cols="30" rows="10" place></textarea>
+                </div>
+                <div>
+                    <span class="input input--ruri">
+                        <textarea name="" id="" cols="30" rows="10" place>
+
+                        </textarea>
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </section>
+    #}
 {% endblock %}
 {% block javascript_bottom %}
     <script src="{{ asset('build/app.js') }}"></script>

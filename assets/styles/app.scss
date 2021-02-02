@@ -231,7 +231,7 @@ header {
     position: relative;
     @include media-breakpoint-up(lg) {
         &:after {
-            height: calc( 100% + 6em );
+            height: 100% ;
             top: -6em;
             content: "";
             position: absolute;
