@@ -1,0 +1,30 @@
+version: "3"
+services:
+  php:
+    image: cv-php
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile
+    networks:
+      - traefik
+    environment:
+      - APP_ENV=prod
+      - APP_DEBUG=false
+    ports:
+      - 8999:80
+    labels:
+      traefik.enable: "true"
+
+      traefik.http.routers.cv-http.rule: "Host(`thomas-ripoll.fr`) || Host(`www.thomas-ripoll.fr`)"
+      traefik.http.routers.cv-http.entrypoints: "web"
+      traefik.http.routers.cv-http.middlewares: "https-redirect@file"
+
+      traefik.http.routers.cv-https.rule: "Host(`thomas-ripoll.fr`) || Host(`www.thomas-ripoll.fr`)"
+      traefik.http.routers.cv-https.entrypoints : "websecure"
+      traefik.http.routers.cv-https.middlewares: "security@file, compression@file"
+      traefik.http.routers.cv-https.tls: "true"
+      traefik.http.routers.cv-https.tls.certresolver: "letsencrypt"
+
+networks:
+  traefik:
+    external: true
