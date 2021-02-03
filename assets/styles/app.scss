@@ -310,6 +310,13 @@ header {
         font-weight: 300;
     }
 }
+#diplomes{
+    .openclassrooms-logo{
+        max-height: 20px;
+        vertical-align: baseline;
+        margin-right: 5px;
+    }
+}
 #bio{
     margin-bottom: 5em;
     p{
@@ -318,4 +325,9 @@ header {
 }
 .contact {
     background-color: #2F3238;
+}
+footer{
+    background-color: #212529;
+    color: white;
+    padding: 10px;
 }
