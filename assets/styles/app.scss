@@ -251,12 +251,18 @@ header {
 
             .left {
                 >div {
-                    padding-left: 7em;
+                    padding-left: 0em;
+                    padding-top: 6em;
                     background-image: var(--logo);
                     background-repeat: no-repeat;
                     background-position: left top;
                     background-size: 5em;
                     height: 100%;
+
+                    @include media-breakpoint-up(lg) {
+                        padding-left: 6em;
+                        padding-top: 0em;
+                    }
                 }
                 .date {
                     position: absolute;
@@ -283,7 +289,10 @@ header {
             .right {
                 >div {
                     padding-top: 40px;
-                    padding-left: 6em;
+                    @include media-breakpoint-up(lg) {
+                        padding-left: 6em;
+                    }
+
                 }
             }
         }
