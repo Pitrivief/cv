@@ -13,17 +13,18 @@ services:
     ports:
       - 8999:80
     labels:
-      traefik.enable: "true"
-
-      traefik.http.routers.cv-http.rule: "Host(`thomas-ripoll.fr`) || Host(`www.thomas-ripoll.fr`)"
-      traefik.http.routers.cv-http.entrypoints: "web"
-      traefik.http.routers.cv-http.middlewares: "https-redirect@file"
-
-      traefik.http.routers.cv-https.rule: "Host(`thomas-ripoll.fr`) || Host(`www.thomas-ripoll.fr`)"
-      traefik.http.routers.cv-https.entrypoints : "websecure"
-      traefik.http.routers.cv-https.middlewares: "security@file, compression@file"
-      traefik.http.routers.cv-https.tls: "true"
-      traefik.http.routers.cv-https.tls.certresolver: "letsencrypt"
+      - "traefik.enable=true"
+      - "traefik.http.routers.cv-http.rule=Host(`thomas-ripoll.fr`) || Host(`www.thomas-ripoll.fr`)"
+      - "traefik.http.routers.cv-http.entrypoints=web"
+      - "traefik.http.routers.cv-http.middlewares=https-redirect@file"
+      - "traefik.http.routers.cv-https.rule=Host(`thomas-ripoll.fr`) || Host(`www.thomas-ripoll.fr`)"
+      - "traefik.http.routers.cv-https.entrypoints=websecure"
+      - "traefik.http.routers.cv-https.middlewares=testredirectregex, security@file, compression@file"
+      - "traefik.http.routers.cv-https.tls=true"
+      - "traefik.http.routers.cv-https.tls.certresolver=letsencrypt"
+      - "traefik.http.middlewares.testredirectregex.redirectregex.regex=^https://thomas-ripoll.fr/(.*)"
+      - "traefik.http.middlewares.testredirectregex.redirectregex.replacement=https://www.thomas-ripoll.fr/$${1}"
+      - "traefik.http.middlewares.testredirectregex.redirectregex.permanent=true"
 
 networks:
   traefik:
