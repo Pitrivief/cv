@@ -4,7 +4,7 @@
 {% block stylesheets %}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <link href="{{ asset('build/app.css') }}" rel="stylesheet"/>
+    {{ encore_entry_link_tags('app') }}
 {% endblock %}
 {% block body %}
 <nav class="menu">
@@ -254,5 +254,5 @@
     </footer>
 {% endblock %}
 {% block javascript_bottom %}
-    <script src="{{ asset('build/app.js') }}"></script>
+    {{ encore_entry_script_tags('app') }}
 {% endblock %}

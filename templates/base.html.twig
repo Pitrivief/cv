@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% block stylesheets %}{% endblock %}
     </head>
-    <body>
+    <body data-bs-spy="scroll" data-bs-target=".menu" data-offset="50">
         {% block body %}{% endblock %}
-        {% block bottom_javascripts %}{% endblock %}
+        {% block javascript_bottom %}{% endblock %}
     </body>
 </html>
