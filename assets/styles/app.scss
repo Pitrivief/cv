@@ -246,8 +246,14 @@ header {
         padding-top: 3em;
         .experience {
             position: relative;
-            padding-bottom: 6em;
-            padding-top: 6em;
+            padding-bottom: 2em;
+            padding-top: 2em;
+            border-top: 1px solid lightgray;
+            @include media-breakpoint-up(lg) {
+                padding-bottom: 6em;
+                padding-top: 6em;
+                border-top: none;
+            }
 
             .left {
                 >div {
@@ -265,21 +271,24 @@ header {
                     }
                 }
                 .date {
-                    position: absolute;
-                    right: 50%;
-                    top: -0em;
-                    padding-right: 10px;
                     font-size: 0.8em;
                     font-weight: bold;
-                    &:after {
-                        content: "";
+
+                    @include media-breakpoint-up(lg) {
                         position: absolute;
-                        height: 1px;
-                        width: 10px;
-                        background-color: rgb(129, 129, 129);
-                        right: -5px;
-                        top: 50%;
-                        transform: translateY(-50%);
+                        right: 50%;
+                        top: -0em;
+                        padding-right: 10px;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            height: 1px;
+                            width: 10px;
+                            background-color: rgb(129, 129, 129);
+                            right: -5px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
                     }
                 }
                 h3 {
@@ -329,5 +338,5 @@ header {
 footer{
     background-color: #212529;
     color: white;
-    padding: 10px;
+    padding: 20px;
 }
